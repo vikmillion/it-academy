@@ -33,7 +33,7 @@ const week = (day) => {
         default: return "куку, такого дня недели еще нет";
     }
 }
-
+//почему не могу передать данные из input в функцию week?
 
 document.querySelector('.button-3').addEventListener('click', () => {
     console.log('day :>> ',input.value);
