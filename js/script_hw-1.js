@@ -16,7 +16,7 @@ console.log('includeHttp :>> ', includeHttp);
 console.log('includeHtml :>> ', includeHtml);
 
 document.querySelector('.button-2').addEventListener('click', () =>
-    document.querySelector('.hw-1_2').innerHTML = 'http://  first include  ..' + includeHtml+ '  and  .html last include .. '+ includeHtml
+    document.querySelector('.hw-1_2').innerHTML = 'http://  first include  ***' + includeHtml+ '***  and  .html last include *** '+ includeHtml+"***"
 );
 // 3
 const week_1 = ['понедельник', 'вторник', 'среда', 'четверг', 'пятница', 'суббота', 'воскресенье'];
