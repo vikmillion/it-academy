@@ -1,6 +1,7 @@
-// 1
-const array = [];
+// 1--------------------------------------------------------
+
 function chess(x, y) {
+  const array = [];
   for (let i = 0; i < x; i++) {
     for (let j = 0; j < y; j++) {
       if (i % 2 == 0) {
@@ -11,17 +12,22 @@ function chess(x, y) {
     }
     array.push("<br>");
   }
+  return array.join("");
 }
-chess(8, 8);
-const array_2 = array.join("");
+let inputRow = document.querySelector(".hw_2-1_input-1");
+let inputColumn = document.querySelector(".hw_2-1_input-2");
+
 document
   .querySelector(".hw_2-1_button")
   .addEventListener(
     "click",
-    () => (document.querySelector(".hw_2-1_output").innerHTML = array_2)
+    () =>
+      (document.querySelector(".hw_2-1_output").innerHTML = chess(
+        inputRow.value,
+        inputColumn.value
+      ))
   );
-//2
-
+//2----------------------------------------------------
 const fact = (x) => {
   let fact = 1;
   for (let i = 1; i <= x; i++) {
@@ -29,15 +35,17 @@ const fact = (x) => {
   }
   return fact;
 };
-fact(4);
+// fact(4);
+let inputFact = document.querySelector(".hw_2-2_input-1");
 document
   .querySelector(".hw_2-2_button")
   .addEventListener(
     "click",
-    () => (document.querySelector(".hw_2-2_output").innerHTML = fact(4))
+    () => (document.querySelector(".hw_2-2_output").innerHTML = fact(inputFact.value))
   );
-//3
-const array2 = [2, 5, 9, 7, 3, 7, 4, 6, 8];
+//3--------------------------------------------------------
+const array2 = [10, 5, 9, 7, 3, 7, 4, 2, 6, 8];
+
 function buble(array) {
   for (let i = 0; i < array.length; i++) {
     for (let j = 0; j < array.length - 1 - i; j++) {
@@ -63,7 +71,7 @@ document
       ))
   );
 
-//4
+//4-----------------------------------------------------------
 
 // let size = 120;
 let size = document.querySelector(".hw_2-4_input");
