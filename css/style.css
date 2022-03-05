@@ -3,6 +3,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -10,14 +11,31 @@ body {
   max-width: 1280px;
   height: 100vh;
   margin: 0 auto;
+  overflow-x: hidden;
   /* padding: 0% 5%; */
   background: rgb(4, 52, 40);
-  background: linear-gradient(
-    0deg,
-    rgba(4, 52, 40, 1) 0%,
-    rgba(225, 239, 255, 1) 57%,
-    rgba(225, 255, 247, 1) 100%
-  );
+  background: linear-gradient(0deg,
+      rgba(4, 52, 40, 1) 0%,
+      rgba(225, 239, 255, 1) 57%,
+      rgba(225, 255, 247, 1) 100%);
+      
+}
+h1{
+  display: flex;
+  justify-content: center;
+  padding: 1% 0%;
+}
+
+.returnHome {
+  position: fixed;
+  display: flex;
+  right: 50px;
+  bottom: 50px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background: rgb(194, 219, 249);
+  background: linear-gradient(0deg, rgba(194, 219, 249, 1) 1%, rgba(225, 239, 255, 1) 27%, rgba(4, 52, 40, 1) 100%);
 }
 
 div {
