@@ -1,15 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
-.calc {
-    display: grid;
+.calc,
+.calc2 {
     border-radius: 15px;
     width: 350px;
-    /* height: 3075x; */
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
     grid-template-columns: repeat(4, 1fr);
-    /* grid-auto-rows: 60px; */
-    
-    gap: 5px;
     padding: 2%;
     justify-content: center;
     align-items: center;
@@ -19,21 +15,54 @@
 
 }
 
-.calc__result {
+.calc {
+    display: grid;
+    gap: 5px;
+}
+
+.calc2 {
+
+    display: flex;
+    flex-wrap: wrap;
+    height: 400px;
+    
+}
+
+.calc__result,
+.calc__result2,
+.calc__resultInput {
     height: 50px;
     width: 328px;
     background-color: azure;
     border-radius: 8px;
-    grid-column: 1 / -1;
+
     color: rgb(0, 0, 0);
     padding: 10px;
 
 }
 
+input.calc__resultInput{
+    background-color: rgb(229, 233, 233);
+    height: 50px;
+
+}
+
+.calc__result {
+    grid-column: 1 / -1;
+}
+
+.calc__result2 {}
+
+.calc__resultInput {}
+
 button.calc__btn,
 button.calc__btn_operator,
 button.calc__btn_reset,
-button.calc__btn_equal {
+button.calc__btn_equal,
+button.calc__btn2,
+button.calc__btn_operator2,
+button.calc__btn_reset2,
+button.calc__btn_equal2 {
     font-family: "Fira Code",
         monospace;
     font-size: x-large;
@@ -42,26 +71,50 @@ button.calc__btn_equal {
     cursor: pointer;
     box-shadow: 2px 3px 2px rgb(0 0 0 / 50%);
 }
+
+button.calc__btn2,
+button.calc__btn_operator2,
+button.calc__btn_reset2,
+button.calc__btn_equal2 {
+   padding:  3%;
+}
+
 .calc__btn:hover,
 button.calc__btn_operator:hover,
 button.calc__btn_reset:hover,
-button.calc__btn_equal:hover {
+button.calc__btn_equal:hover,
+.calc__btn2:hover,
+button.calc__btn_operator2:hover,
+button.calc__btn_reset2:hover,
+button.calc__btn_equal2:hover {
     opacity: 0.7;
 }
-.calc__btn:active {
+
+.calc__btn:active,
+.calc__btn2:active {
     box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
 }
-.calc__btn_operator {
+
+.calc__btn_operator,
+.calc__btn_operator2 {
     background-color: RGB(227, 185, 138);
 }
-.calc__btn_reset {
+
+.calc__btn_reset,
+.calc__btn_reset2 {
     background-color: #ff5050;
     color: #fff;
 
 }
-.calc__btn_equal {
+
+.calc__btn_equal,
+.calc__btn_equal2 {
     background-color: #4e8082;
     color: #fff;
-    grid-column: 2-1;
+    /* grid-column: 2-1; */
 
+}
+.calc__btn_equal{
+width: 150px;
+flex: none;
 }
