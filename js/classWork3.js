@@ -77,28 +77,28 @@
 //     .catch(() => console.log('Error'))
 //     .finally(() => console.log('funally'));
 
-const first = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("object :>> 1");
-      resolve();
-    }, 1500);
-  });
-const second = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("object :>> 2");
-      //resolve();
-        reject();
-    }, 1000);
-  });
-const third = () =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      console.log("object :>> 3");
-      resolve();
-    }, 2000);
-  });
+// const first = () =>
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("object :>> 1");
+//       resolve();
+//     }, 1500);
+//   });
+// const second = () =>
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("object :>> 2");
+//       //resolve();
+//         reject();
+//     }, 1000);
+//   });
+// const third = () =>
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("object :>> 3");
+//       resolve();
+//     }, 2000);
+//   });
 
 // first()
 //   .then(() => second())
@@ -108,6 +108,74 @@ const third = () =>
 // Promise.all([first(), second(), third()])
 //   .then(() => console.log("End"))
 //   .catch(() => console.log("Error"));
-Promise.race([first(), second(), third()])
-  .then(() => console.log("End"))
-  .catch(() => console.log("Error"));
+// Promise.race([first(), second(), third()])
+//   .then(() => console.log("End"))
+//   .catch(() => console.log("Error"));
+
+// const first = () => new Promise(resolve => {
+//   setTimeout(() => {
+//     console.log('first :>> ');
+//     resolve();
+
+//   }, 2000)
+// });
+
+// const second = () => new Promise(resolve => {
+//   setTimeout(() => {
+//     console.log('second :>> ');
+//     resolve();
+//   }, 1000)
+// });
+
+// async function run() {
+
+// }
+
+// const run = async () => {
+
+// }
+
+// (async () => {
+//   console.log('start :>> ');
+//   await first();
+//   console.log("midle");
+//   await second();
+//   console.log("end");
+// })();
+
+// function getRandomInt(min = 1, max = 100) {
+//   min = Math.ceil(min);
+//   max = Math.floor(max);
+//   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
+// }
+
+// const first = () =>
+//   new Promise((resolve, reject) => {
+//     let rand = getRandomInt();
+//     if (rand % 2 === 0) {
+//       setTimeout(() => {
+//         resolve(rand);
+//       }, 1000);
+//     } else {
+//       setTimeout(() => {
+//         reject(rand);
+//       }, 1000);
+//     }
+//   });
+// first()
+//   .then((num) => console.log("resolve 1", num))
+//   .catch((num) => console.log("reject 1", num));
+
+// const second = () =>
+//   new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       let rand = getRandomInt();
+
+//       rand % 2 === 0 ? resolve(rand) : reject(rand);
+//     }, 1000);
+//   });
+// second()
+//   .then((num) => console.log("resolve 2", num))
+//   .catch((num) => console.log("reject 2 ", num));
+
+
