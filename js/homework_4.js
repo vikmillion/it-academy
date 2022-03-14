@@ -8,6 +8,7 @@ document.querySelector(".press").addEventListener("click", () => {
       renderTodos(json);
     });
 
+  
   const renderTodos = (todos) => {
     console.log("todos :>> ", todos);
     const outValue = document.getElementById("outValue");
