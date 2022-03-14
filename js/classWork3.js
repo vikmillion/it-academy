@@ -149,22 +149,22 @@
 //   return Math.floor(Math.random() * (max - min)) + min; //Максимум не включается, минимум включается
 // }
 
-// const first = () =>
-//   new Promise((resolve, reject) => {
-//     let rand = getRandomInt();
-//     if (rand % 2 === 0) {
-//       setTimeout(() => {
-//         resolve(rand);
-//       }, 1000);
-//     } else {
-//       setTimeout(() => {
-//         reject(rand);
-//       }, 1000);
-//     }
-//   });
-// first()
-//   .then((num) => console.log("resolve 1", num))
-//   .catch((num) => console.log("reject 1", num));
+const first = () =>
+  new Promise((resolve, reject) => {
+    let rand = getRandomInt();
+    if (rand % 2 === 0) {
+      setTimeout(() => {
+        resolve(rand);
+      }, 1000);
+    } else {
+      setTimeout(() => {
+        reject(rand);
+      }, 1000);
+    }
+  });
+first()
+  .then((num) => console.log("resolve 1", num))
+  .catch((num) => console.log("reject 1", num));
 
 // const second = () =>
 //   new Promise((resolve, reject) => {
